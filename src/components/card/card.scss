@@ -1,0 +1,141 @@
+@import "../../styles/vars.scss";
+
+.card {
+    border-radius: 25px;
+    padding: 30px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    background:
+        linear-gradient(0deg, rgba(32, 38, 44, 0.9) 0%, rgba(32, 38, 44, 0.9) 100%),
+        url(<path-to-image>),
+        lightgray 50% / cover no-repeat;
+
+    h2 {
+        color: #f4f5f1 !important;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Inter;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .desc {
+        color: #f4f5f1;
+        leading-trim: both;
+        text-edge: cap;
+
+        /* Basic Text - Non Caps */
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .filters {
+        display: flex;
+        gap: 20px;
+
+        .range {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+
+            span {
+                display: flex;
+
+                padding: 4px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 4px;
+                color: white;
+                border: 1px solid white;
+                width: fit-content;
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+            h3 {
+                color: #f4f5f1;
+                leading-trim: both;
+                text-edge: cap;
+
+                /* Heading Text */
+                font-family: Inter;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .links {
+                display: flex;
+                gap: 10px;
+
+                a {
+                    color: #f4f5f1;
+                    text-align: right;
+                    leading-trim: both;
+                    text-edge: cap;
+
+                    /* Small Heading Text */
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .right {
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .card {
+        width: 90% !important;
+        gap: 40px;
+
+        .bottom {
+            margin-top: 15px;
+            align-items: flex-end;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+
+            .range {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                flex-wrap: wrap;
+
+                span {
+                    height: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .card {
+        width: 670px !important;
+    }
+}

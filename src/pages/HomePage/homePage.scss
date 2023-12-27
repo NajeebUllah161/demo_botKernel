@@ -1,0 +1,78 @@
+@import "../../styles/vars.scss";
+
+.container {
+    width: 100%;
+
+    .content-area {
+        display: flex;
+        min-height: 100vh;
+        width: 100%;
+
+        .content-body {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin: 30px;
+            gap: 20px;
+
+            h2 {
+                color: #20262c;
+                leading-trim: both;
+                text-edge: cap;
+
+                /* Heading Text */
+                font-family: Inter;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .items {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .container {
+        width: 100%;
+
+        .content-area {
+            display: flex;
+            flex-direction: column-reverse;
+            min-height: 100vh;
+
+            .content-body {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                margin: 10px;
+                gap: 20px;
+
+                .dashboard-title {
+                    display: none;
+                    color: #20262c;
+                    leading-trim: both;
+                    text-edge: cap;
+
+                    /* Heading Text */
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+
+                .items {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import "../../styles/vars.scss";
+
+.base-button {
+    display: flex;
+    min-width: 143.025px;
+    padding: 15px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(252, 175, 23, 0.8);
+    border-radius: 40px;
+    background-color: $accent;
+    margin-top: 3px;
+    color: var(--Dark, #20262c);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

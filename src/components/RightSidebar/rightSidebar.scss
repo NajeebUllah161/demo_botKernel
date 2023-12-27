@@ -1,0 +1,117 @@
+@import "../../styles/vars.scss";
+
+.right-sidebar {
+    margin-top: 30px;
+    min-height: 864px;
+    padding: 40px 30px;
+    width: 305px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 2px solid #233e5933;
+    justify-content: space-between;
+
+    h2 {
+        color: $accent;
+        leading-trim: both;
+        text-edge: cap;
+
+        /* Heading Text */
+        font-family: Inter;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .show-more-mobile {
+        display: none;
+    }
+
+    .orders {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: $mobile) {
+    .right-sidebar {
+        margin: 10px;
+        min-height: 100px;
+        padding: 0px;
+        margin: 10px;
+        width: 95%;
+
+        border-left: none;
+
+        gap: 28px;
+        display: flex;
+        flex-direction: column;
+
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+        h2 {
+            color: $accent;
+            leading-trim: both;
+            text-edge: cap;
+
+            /* Heading Text */
+            font-family: Inter;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .show-more {
+            display: none;
+        }
+
+        .show-more-mobile {
+            display: block;
+        }
+
+        .orders {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            overflow-x: scroll;
+            padding-bottom: 10px;
+
+            /* Customize scrollbar */
+            &::-webkit-scrollbar {
+                width: 5px;
+                height: 6px;
+                /* Set the width of the scrollbar */
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #dcdcdc;
+                /* Set the color of the scrollbar thumb */
+                border-radius: 50px;
+                height: 4px;
+                /* Round the corners of the scrollbar thumb */
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: #f0f0f0;
+                /* Set the color of the scrollbar track */
+            }
+        }
+    }
+}

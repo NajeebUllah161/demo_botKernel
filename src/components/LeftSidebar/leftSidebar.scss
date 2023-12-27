@@ -1,0 +1,129 @@
+@import "../../styles/vars.scss";
+
+.left-sidebar {
+    min-height: 864px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 305px;
+    padding: 40px 30px;
+    background-color: $primary;
+    border: 1px solid rgb(63, 63, 63);
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .close {
+            border-radius: 40px;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .greetings {
+        display: flex;
+        justify-content: space-between;
+
+        color: #f4f5f1;
+        leading-trim: both;
+        text-edge: cap;
+
+        /* Basic Text */
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+
+        .first,
+        .second {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    .more-options {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .more-heading {
+            color: var(--Secondary, #fcaf17);
+            leading-trim: both;
+            text-edge: cap;
+
+            /* Basic Text */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        a {
+            color: #f4f5f1;
+            leading-trim: both;
+            text-edge: cap;
+
+            /* Basic Text - Non Caps */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+    }
+
+    .address {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        color: var(--Light-Shade, #f4f5f1);
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+
+        .add-address {
+            color: $accent;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.mobile-sidebar {
+    position: fixed;
+    background: #8080809c;
+    width: 100vh;
+    top: 0px;
+    height: 100%;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}

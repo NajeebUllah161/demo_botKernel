@@ -1,0 +1,44 @@
+@import "../../styles/vars.scss";
+
+.order-info {
+    display: flex;
+    align-items: center;
+
+    .arrow {
+        padding: 4px;
+    }
+
+    .info {
+        p {
+            color: $primary;
+            leading-trim: both;
+            text-edge: cap;
+
+            /* Basic Text */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .order-info {
+        border: 1px solid rgb(220, 220, 220);
+        border-radius: 10px;
+        padding: 10px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .arrow {
+        padding: 4px;
+
+        display: none;
+    }
+}

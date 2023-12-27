@@ -1,0 +1,32 @@
+@import "../../styles/vars.scss";
+
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $primary;
+    width: 100%;
+
+    .inner {
+        width: 100%;
+        margin: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .menu-icon {
+            width: 100px;
+            color: white;
+
+            svg {
+                width: 50px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
